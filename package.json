@@ -1,0 +1,10 @@
+{
+  "name": "env-builder",
+  "version": "1.0.0",
+  "description": "Copy your .env file into a blank .example.env",
+  "license": "ISC",
+  "author": "HunterWhiteDev",
+  "type": "module",
+  "main": "index.ts",
+  "bin": "index.js"
+}
