@@ -10,8 +10,12 @@ const envContents = fs.readFileSync(filePath, "utf8");
 let envExampleContents = "";
 for (const line of envContents.split("\n")) {
   if (line) {
-    const newLine = line.split("=")[0] + "=\n";
-    envExampleContents = envExampleContents += newLine;
+    if (line.startsWith("#")) {
+      envExampleContents += line + "\n";
+    } else {
+      const newLine = line.split("=")[0] + "=\n";
+      envExampleContents = envExampleContents += newLine;
+    }
   }
 }
 
